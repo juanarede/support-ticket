@@ -1,6 +1,6 @@
-@extends('layouts.homeLayout')
 
-@section('content')
+
+
 
 <div class="top-0  lg:py-1 w-full bg-transparent lg:relative z-50 dark:bg-gray-200">
     <nav class="z-10 sticky top-0 left-0 right-0 max-w-4xl xl:max-w-5xl mx-auto px-3 py-1 lg:border-none lg:py-3">
@@ -40,7 +40,7 @@
             </div>
             <div class="hidden lg:flex lg:items-center gap-x-2">
                 <a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold rounded-xl transition duration-200" href="#">Sign In</a>
-    <a class="hidden lg:inline-block py-2 px-6 bg-black hover:bg-gray-600 text-sm text-white font-bold rounded-xl transition duration-200" href="#">Sign up</a>
+    <a class="hidden lg:inline-block py-2 px-6 bg-black hover:bg-gray-600 text-sm text-white font-bold rounded-xl transition duration-200" href = "{{ route('register.externalUser') }}">Sign up</a>
             </div>
 
         </div>
@@ -138,4 +138,4 @@
     });
     </script>
 
-@endsection
+
