@@ -15,5 +15,5 @@ class UsuarioExterno extends Model
         'Empresa',
         'imagen'
     ];
-
 }
+

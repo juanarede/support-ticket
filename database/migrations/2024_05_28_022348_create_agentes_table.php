@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('Email')->nullable();
             $table->string('Puesto')->nullable();
             $table->string('Dependencia')->nullable();
-            $table->string('Password')->nullable();
+            $table->string('password')->nullable();
             $table->string('imagen')->nullable();
             $table->double('Sueldo')->nullable();
             $table->timestamps();

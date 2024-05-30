@@ -13,10 +13,10 @@ class Agente extends Model
         'Email',
         'Puesto',
         'Dependencia',
-        'Password',
+        'password',
         'imagen',
         'Sueldo'
     ];
 
-   
+
 }
