@@ -42,29 +42,6 @@
     </div>
 </section>
 
-<section id="select-ticket" class="hidden">
-    @include('selectCardTicket')
-</section>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const enviarTicketBtn = document.querySelector('#enviar-ticket');
-
-        enviarTicketBtn.addEventListener('click', function () {
-            document.getElementById('features').style.display = 'none';
-
-            const xhr = new XMLHttpRequest();
-            xhr.open('GET', '/selectCardTicket', true);
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    document.getElementById('select-ticket').innerHTML = xhr.responseText;
-                    document.getElementById('select-ticket').classList.remove('hidden');
-                }
-            };
-            xhr.send();
-        });
-    });
-</script>
 
 
 @endsection

@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('detalle_tickets', function (Blueprint $table) {
             $table->id();
             $table->string('IdTicket')->nullable();
-            $table->dateTime('FechaCreacion')->nullable();
             $table->string('UsuarioRemitente')->nullable();
             $table->string('EmailRemitente')->nullable();
             $table->string('UsuarioAsignado')->nullable();

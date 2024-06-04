@@ -2,16 +2,22 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\FormTicketController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegisterAgentUserController;
 use App\Http\Controllers\RegisterExternalUserController;
+use App\Http\Controllers\SelectCardTicketController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
-Route::view('/selectCardTicket', 'selectCardTicket');
+Route::get('/selectCardTicket', [SelectCardTicketController::class, 'index'])->name('selectCardTicket');
+Route::get('/selectCardTicket/{ticketId}', [SelectCardTicketController::class, 'getTicketURL']);
+
+Route::get('/formTicket', [FormTicketController::class, 'index'])->name('formTicket');
+
 
 
 Route::get('/register/externalUser', [RegisterExternalUserController::class, 'register'])->name('register.externalUser');

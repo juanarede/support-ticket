@@ -4,9 +4,9 @@
     <div class="flex items-center justify-center p-12 mt-8">
         <div class="mx-auto w-full max-w-[550px] bg-white">
             <div class="mb-5">
-                <div class="md:flex md:items-center md:-mx-2">
+                <div class="flex flex-col md:flex-row md:items-center md:-mx-2 md:gap-5">
                     <a id="clientLink" href="{{ route('register.externalUser') }}"
-                        class="flex justify-center mr-2 fold-bold relative inline-block rounded border-2 border-black bg-black px-3 py-1 text-base font-bold text-white transition duration-100">
+                        class="flex justify-center mr-2 mb-2 md:mb-0 fold-bold relative inline-block w-full md:w-auto rounded border-2 border-black bg-black px-3 py-1 text-base font-bold text-white transition duration-100">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -16,7 +16,7 @@
                     </a>
 
                     <a id="workerLink" href="{{ route('register.agentUser') }}"
-                        class="flex justify-center fold-bold relative inline-block rounded border-2 border-black bg-white px-3 py-1 text-base font-bold text-black transition duration-100 hover:bg-black hover:text-white">
+                        class="flex justify-center fold-bold relative inline-block w-full md:w-auto rounded border-2 border-black bg-white px-3 py-1 text-base font-bold text-black transition duration-100 hover:bg-black hover:text-white">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -26,6 +26,7 @@
                     </a>
                 </div>
             </div>
+
             <form action="{{ route('register.externalUser.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="-mx-3 flex flex-wrap">
@@ -33,14 +34,14 @@
                         <div class="mb-5">
                             <label class="mb-3 block text-base font-medium text-[#07074D]">User</label>
                             <input name="Usuario" placeholder="Username" required
-                                class="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                                class="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#000000] focus:shadow-md" />
                         </div>
                     </div>
                     <div class="w-full px-3 sm:w-1/2">
                         <div class="mb-5">
                             <label class="mb-3 block text-base font-medium text-[#07074D]">Email</label>
                             <input name="Email" type="email" placeholder="Email" required
-                                class="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                                class="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#000000] focus:shadow-md" />
                         </div>
                     </div>
                 </div>
@@ -49,14 +50,14 @@
                         <div class="mb-5">
                             <label class="mb-3 block text-base font-medium text-[#07074D]">Password</label>
                             <input name="password" type="password" placeholder="Password" required
-                                class="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                                class="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#000000] focus:shadow-md" />
                         </div>
                     </div>
                     <div class="w-full px-3 sm:w-1/2">
                         <div class="mb-5">
                             <label class="mb-3 block text-base font-medium text-[#07074D]">Confirm Password</label>
                             <input name="password_confirmation" type="password" placeholder="Confirm Password" required
-                                class="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                                class="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#000000] focus:shadow-md" />
                         </div>
                     </div>
                 </div>
@@ -65,7 +66,7 @@
                         <div class="mb-5">
                             <label class="mb-3 block text-base font-medium text-[#07074D]">Company</label>
                             <input name="Empresa" placeholder="Company" required
-                                class="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                                class="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#000000] focus:shadow-md" />
                         </div>
                     </div>
                     <div class="w-full px-3 sm:w-1/2">

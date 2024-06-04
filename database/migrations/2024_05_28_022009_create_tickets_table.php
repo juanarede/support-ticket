@@ -13,24 +13,27 @@ return new class extends Migration
     {
         Schema::create('tickets', function (Blueprint $table) {
             $table->id();
-            $table->string('IdTicket')->nullable();
-            $table->dateTime('FechaCreacion')->nullable();
-            $table->dateTime('FechaCierre')->nullable();
-            $table->dateTime('FechaActualizacion')->nullable();
-            $table->string('Asunto')->nullable();
-            $table->text('Comentario')->nullable();
-            $table->string('UsuarioRemitente')->nullable();
-            $table->string('EmailRemitente')->nullable();
-            $table->string('UsuarioAsignado')->nullable();
-            $table->string('EmailUsuarioAsignado')->nullable();
-            $table->string('Status')->nullable();
-            $table->integer('idSLA')->nullable();
-            $table->string('Categoria')->nullable();
-            $table->string('NumeroSerie')->nullable();
-            $table->string('Modelo')->nullable();
-            $table->string('NumeroActivo')->nullable();
-            $table->string('Prioridad')->nullable();
-            $table->string('PrioridadAgente')->nullable();
+            $table->dateTime('fecha_cierre')->nullable();
+            $table->string('asunto')->nullable();
+            $table->text('comentario')->nullable();
+            // $table->string('UsuarioRemitente')->nullable();
+            // $table->string('EmailRemitente')->nullable();
+            // $table->string('UsuarioAsignado')->nullable();
+            // $table->string('EmailUsuarioAsignado')->nullable();
+            $table->string('status')->nullable();
+            $table->integer('id_sla')->nullable();
+            $table->string('categoria')->nullable();
+            $table->string('numero_de_serie')->nullable();
+            $table->string('modelo')->nullable();
+            $table->string('numero_de_activo')->nullable();
+            $table->string('prioridad')->nullable();
+            $table->string('prioridad_agente')->nullable();
+
+
+            $table->foreignId('usuario_asignado_id')->constrained('users');
+            $table->foreignId('cliente_remitente_id')->constrained('users');
+
+
             $table->timestamps();
         });
     }
